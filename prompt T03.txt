@@ -1,0 +1,53 @@
+GEMINI
+1.Buatlah sebuah sistem yang dapat mendukung operasional sehari-hari di Laundry Del.
+coba berikan ide yang baik
+
+2.kalau implementasi dalam alur java akan seperti apa kah hasilnya
+
+3.karna loundry del tidak ada biaya coba buat sistem yang tidak perlu menghitung biaya
+buat secara kompleks, berika penjelasan alurnya, supaya dapat saya mengerti
+
+CHATGPT
+1.import java.time.LocalDateTime;
+import java.util.*;
+
+// Entitas utama: Pakaian milik siapa dan apa isinya
+class ItemCucian {
+    String jenis; // Kemeja, Celana, Selimut
+    String warna;
+}
+
+class BundelCucian {
+    String idBatch;
+    String pemilikId;
+    List<ItemCucian> daftarItem;
+    StatusLaundry status;
+    int prioritas; // 1: Normal, 2: Mendesak (misal: Seragam)
+
+    public BundelCucian(String id, String pemilik, int prioritas) {
+        this.idBatch = id;
+        this.pemilikId = pemilik;
+        this.prioritas = prioritas;
+        this.status = StatusLaundry.DI_ANTREAN;
+        this.daftarItem = new ArrayList<>();
+    }
+}
+
+enum StatusLaundry {
+    DI_ANTREAN, PENCUCIAN, PENGERINGAN, SETRIKA, SIAP_AMBIL, SELESAI
+} 
+
+
+apakah sistem ini sudah cukup kompleks dalam pembuatan sistem loundry?
+
+2.coba berikan lagi code versi kamu, dan berikan contoh inputannya
+
+3.sebenarnya sistem yang aku buat itu maunya kayak yang notifikasi
+
+misal loundry itu diangku dari asrama jam8 malam hari jumat, dan kemudian akan diantar kembali pada hari sabtu pukul 2 siang
+
+berikan sistem yang cocok dengan skema yang aku berikan supaya mendapatkan notifkasi bahwasanya loundry del itu sudah kembali ke asrama hari sabtu 
+
+4.berikan solusi yang relevan untuk memperbaiki error yang diberikan 
+
+5.tuliskan ulang codenya dengan perbaikannya

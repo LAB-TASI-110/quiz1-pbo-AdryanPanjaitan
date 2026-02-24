@@ -1,0 +1,25 @@
+CHATGPT
+1.# Soal Pemrograman - Penjumlahan Nilai Siswa
+## Deskripsi Masalah
+Data nilai siswa disimpan dalam sebuah rak fisik yang tersusun rapat. Perhatikan pola penyimpanan pada gambar di bawah ini untuk memahami bagaimana kelompok siswa dipisahkan. 
+Input:
+1.	Jumlah total data (N).
+2.	Deret nilai (n1, n2, …, n).
+3.	Kode kelompok siswa
+
+**Tugas**
+Buatlah program yang mampu menentukan total nilai hanya untuk kelompok yang diminta.
+<p align="center">
+  <img src="image/pola.jpeg" width="300">
+</p>
+
+solusi yang mendekati yang cocok untuk permasalahan yang ada dalam soal ini, berikan juga penjelasannya
+solusinya itu berupa pola, sistem yang memungkinkan menggunakan array jika memungkinkan untuk digunakan
+
+2.Buatkan versi Java
+public class nya Driver2
+
+3.apa penjelasan pada inputan, kenapa harus seperti itu?
+
+4.apa yang menjadi inti permasalahan pada saat mengcompile ini
+
