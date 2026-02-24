@@ -1,13 +1,14 @@
+
 import java.time.*;
 import java.util.*;
 import java.util.concurrent.*;
 
-// Status laundry
+
 enum StatusLaundry {
     DIJEMPUT, DIPROSES, DIANTAR, SELESAI
 }
 
-// Entitas laundry
+
 class LaundryOrder {
     String id;
     String asrama;
@@ -26,10 +27,10 @@ class LaundryOrder {
     }
 }
 
-// Service notifikasi
+
 class NotificationService {
     public static void kirimNotif(LaundryOrder order) {
-        System.out.println("\n🔔 NOTIFIKASI 🔔");
+        System.out.println("\n NOTIFIKASI ");
         System.out.println("Laundry untuk asrama " + order.asrama +
                 " sudah KEMBALI ke asrama!");
         System.out.println("Waktu antar: " + order.waktuAntar);
@@ -37,7 +38,7 @@ class NotificationService {
     }
 }
 
-// Driver utama
+
 public class Driver3 {
     public static void main(String[] args) {
         System.out.println("Program jalan!");
@@ -47,7 +48,7 @@ public class Driver3 {
         System.out.print("Masukkan nama asrama: ");
         String asrama = sc.nextLine();
 
-        // Jadwal tetap DEL
+        
         LocalDateTime pickup =
                 LocalDateTime.of(2026, 2, 27, 20, 0); // Jumat 20:00
 
@@ -64,10 +65,10 @@ public class Driver3 {
         ScheduledExecutorService scheduler =
                 Executors.newSingleThreadScheduledExecutor();
 
-        System.out.println("\n⏳ Laundry sedang diproses...");
+        System.out.println("\n  Laundry sedang diproses...");
         System.out.println("(Simulasi: 10 detik = 18 jam)");
 
-        // Simulasi waktu → 10 detik = 18 jam
+        
         scheduler.schedule(() -> {
             order.status = StatusLaundry.DIANTAR;
             NotificationService.kirimNotif(order);
